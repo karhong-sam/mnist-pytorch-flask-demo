@@ -1,5 +1,5 @@
 import requests
 
-resp = requests.post("http://localhost:5000/predict", files={"file": open("four.png", "rb")})
+resp = requests.post("https://flask-pytorch-test01.herokuapp.com/predict", files={"file": open("nine.png", "rb")})
 
 print(resp.text)
