@@ -4,7 +4,7 @@ import torchvision.transforms as transforms
 from PIL import Image
 import io
 
-device = torch.device('cuda')
+device = torch.device('cpu')
 # load model
 # Fully connected neural network with one hidden layer
 class NeuralNet(nn.Module):
@@ -28,7 +28,7 @@ num_classes = 10
 model = NeuralNet(input_size, hidden_size, num_classes).to(device)
 
 PATH = "app/mnist_ffn.pth"
-model.load_state_dict(torch.load(PATH))
+model.load_state_dict(torch.load(PATH, map_location=device))
 model.eval()
 
 # image -> Tensor
