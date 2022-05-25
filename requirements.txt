@@ -69,7 +69,7 @@ mkl-random==1.2.2
 mkl-service==2.4.0
 multidict==5.2.0
 munkres==1.1.4
-nb-conda==2.2.1
+nb-conda
 nb-conda-kernels==2.3.1
 nbclient==0.5.13
 nbconvert==6.4.4
